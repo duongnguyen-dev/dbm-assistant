@@ -6,9 +6,9 @@ export default function Layout({
   return (
     <html lang="en">
       <body>
-        {/* Layout UI */}
-        {/* Place children where you want to render a page or nested layout */}
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   )
