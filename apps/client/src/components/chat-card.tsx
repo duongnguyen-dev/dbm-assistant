@@ -9,6 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+
+import { ThumbsUp, ThumbsDown, RefreshCw } from "lucide-react"
 // import { Input } from "@/components/ui/input"
 // import { Label } from "@/components/ui/label"
 // import {
@@ -26,14 +28,18 @@ type ChatCardProps = {
 
 export default function ChatCard({message, user }: ChatCardProps) {
   return (
-    <Card className={`w-fit max-w-full h-fit items-center ${user === 1 ? "ml-auto mr-0 " : "ml-0 mr-auto "}`}>
-      <CardContent className="">
+    <Card className={`w-fit mt-3 max-w-full h-fit items-center p-4 ${user === 1 ? "ml-auto mr-0 bg-sidebar" : "ml-0 mr-auto"}`}>
+      <CardContent className={`p-0`}>
         <span>{message}</span>
       </CardContent>
-      {/* <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
-      </CardFooter> */}
+      {user === 0 ?
+        <div className="flex w-fit">
+          <Button variant="ghost" size="icon"><ThumbsUp /></Button>
+          <Button variant="ghost" size="icon"><ThumbsDown /></Button>
+          <Button variant="ghost" size="icon"><RefreshCw /></Button>
+        </div> :
+        <div></div>
+      } 
     </Card>
   )
 }
