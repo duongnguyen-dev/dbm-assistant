@@ -6,6 +6,8 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { Textarea } from "@/components/ui/textarea"
+// import { , Send,  } from "lucide-react"
 import "@/styles/globals.css"
 
 export default function Chat() {
@@ -18,10 +20,27 @@ export default function Chat() {
           <AppMenubar />
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min">
+          <div className="max-h-[75vh] flex-1 rounded-xl bg-muted/50 overflow-y-auto">
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
+            <ChatCard message={"Hello world"} user={1}/>
             <ChatCard message={"Hello world"} user={1}/>
           </div>
           <div className="h-fit flex rounded-xl bg-muted/50">
+            <Textarea className="resize-none"></Textarea>
           </div>
         </div>
       </SidebarInset>
