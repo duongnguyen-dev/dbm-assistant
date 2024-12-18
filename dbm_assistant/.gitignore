@@ -2,3 +2,4 @@
 */*/__pycache__
 */__pycache__
 ./dbm_assistant.egg-info
+./db_assistant/app/.milvus_llamaindex

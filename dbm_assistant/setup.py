@@ -9,12 +9,15 @@ setup(
         "python-dotenv==1.0.1",
         "minio==7.2.12",
         "pyyaml==6.0.2",
-        "vllm==0.6.4.post1",
-        "psycopg2-binary==2.9.10",
+        "psycopg2-binary==2.9.10", 
         "loguru==0.7.3",
         "minio==7.2.12",
         "fastapi==0.115.6",
-        "uvicorn==0.34.0"
+        "uvicorn==0.34.0",
+        "llama-index==0.12.5",
+        "llama-cpp-python==0.3.1",
+        "llama-index-embeddings-huggingface==0.4.0",
+        "llama-index-vector-stores-milvus==0.4.0"
     ],
     # Metadata for the package
     author="duongnguyen-dev",

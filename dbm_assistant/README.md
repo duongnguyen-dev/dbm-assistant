@@ -1,0 +1,1 @@
+CMAKE_ARGS="-DCMAKE_OSX_ARCHITECTURES=arm64 -DGGML_METAL=on" pip install --upgrade --verbose --force-reinstall --no-cache-dir llama-cpp-python==0.3.1

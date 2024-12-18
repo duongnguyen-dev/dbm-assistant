@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dbm_assistant
+Version: 0.0.1
+Author: duongnguyen-dev
+Author-email: duongng2911@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Requires-Dist: pandas==2.0.3
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: minio==7.2.12
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: psycopg2-binary==2.9.10
+Requires-Dist: loguru==0.7.3
+Requires-Dist: minio==7.2.12
+Requires-Dist: fastapi==0.115.6
+Requires-Dist: uvicorn==0.34.0
+Requires-Dist: llama-index==0.12.5
+Requires-Dist: llama-index-embeddings-huggingface==0.4.0
+Requires-Dist: llama-index-vector-stores-milvus==0.4.0

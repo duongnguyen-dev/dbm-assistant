@@ -13,10 +13,10 @@ run_app:
 	cd scripts && chmod +x ${RUN_APP_DIR} && bash ${RUN_APP_DIR}
 
 prisma_migrate: 
-	cd tools && npx prisma migrate dev --name "$(MIGRATION_NAME)"
+	cd apps/server && npx prisma migrate dev --name "$(MIGRATION_NAME)"
 
 prisma_studio:
-	cd tools && npx prisma studio
+	cd apps/server && npx prisma studio
 
 run_database_dev:
 	docker compose -f docker-compose-dev.yml up

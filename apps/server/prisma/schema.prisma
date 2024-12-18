@@ -18,11 +18,6 @@ enum Role {
   USER
 }
 
-enum Model {
-  AQUILA
-  AQUILA2
-}
-
 enum Feedback {
   SATISFIED
   UNSATISFIED
@@ -31,10 +26,34 @@ enum Feedback {
 model User {
   id Int @id @default(autoincrement())
   username String?
-  password String
-  email String?
+  hashedPassword String
+  salted String
+  email String @unique
   role Role
-  chatConversationId ChatConversation[] 
+  chatConversation ChatConversation[]
+  db Database?
+}
+
+model Database {
+  id Int @id @default(autoincrement())
+  host String
+  port String
+  username String
+  password String
+  database String
+  userId Int @unique
+  user User @relation(fields: [userId], references: [id])
+
+  embedId Int
+  embed EmbedModel @relation(fields: [embedId], references: [id])
+}
+
+model EmbedModel {
+  id Int @id @default(autoincrement())
+  url String
+  name String
+
+  database Database[]
 }
 
 model ChatConversation {
@@ -50,10 +69,19 @@ model ChatConversation {
 model ChatMessage {
   id Int @id @default(autoincrement())
   createdDate DateTime
-  model Model
   content Json
   feedback Feedback
   chatConversationId Int
-
   chatConversation ChatConversation @relation(fields: [chatConversationId], references: [id])
+
+  llmModelId Int
+  llmModel LLMModel @relation(fields: [llmModelId], references: [id])
+}
+
+model LLMModel {
+  id Int @id @default(autoincrement())
+  url String
+  name String
+
+  chatMessage ChatMessage[]
 }

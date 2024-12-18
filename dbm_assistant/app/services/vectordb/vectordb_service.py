@@ -54,7 +54,6 @@ class VectorDBService:
                     "availability": item[4],
                     "specification": item[5]
                 }
-
                 inserted_data = [
                     {
                         "metadata": metadata,
